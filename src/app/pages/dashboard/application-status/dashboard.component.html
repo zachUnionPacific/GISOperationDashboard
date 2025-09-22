@@ -1,0 +1,22 @@
+<section class="card">
+  <h2>Dashboard</h2>
+  <p>Jump to the core tools:</p>
+  <div class="links">
+    <a routerLink="/application-status" class="btn">Application Status →</a>
+    <a routerLink="/feature-layer-mapping" class="btn">Feature Layer Mapping →</a>
+  </div>
+</section>
+
+<section class="card">
+  <h3>App Directory</h3>
+  <ul class="app-list">
+    <li *ngFor="let a of directory">
+      <div class="row">
+        <div class="name">{{ a.name }}</div>
+        <a routerLink="/application-status" [queryParams]="{ q: a.name }" class="mini">view status</a>
+      </div>
+      <div class="desc">{{ a.desc }}</div>
+      <div class="meta">Team: {{ a.team }}</div>
+    </li>
+  </ul>
+</section>
