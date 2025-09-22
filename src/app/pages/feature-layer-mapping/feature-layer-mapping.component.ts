@@ -9,7 +9,7 @@ interface FeatureLayer { id: string; name: string; serviceUrl: string; mapsUsedI
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './feature-layer-mapping.component.html',
-  styleUrls: ['./feature-layer-mapping.component.css']
+  styleUrls: ['./feature-layer-mapping.component.scss']
 })
 export class FeatureLayerMappingComponent {
   layers: FeatureLayer[] = [

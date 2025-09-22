@@ -11,7 +11,7 @@ interface AppStatus { id: string; name: string; ownerTeam: string; onCall?: stri
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './application-status.component.html',
-  styleUrls: ['./application-status.component.css']
+  styleUrls: ['./application-status.component.scss']
 })
 export class ApplicationStatusComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
