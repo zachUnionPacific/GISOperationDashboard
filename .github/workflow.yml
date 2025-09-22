@@ -1,0 +1,7 @@
+
+# For more details see https://github.tla.uprr.com/managed/actions/blob/main/Javascript.md
+
+nodeJsVersion: "20"
+runScripts:
+  build: "build"
+  test: "test:ci"
