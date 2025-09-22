@@ -1,1 +1,38 @@
-<p>feature-layer-mapping works!</p>
+<section class="card">
+  <h2>Feature Layers → Maps</h2>
+  <div class="toolbar">
+    <input type="search" placeholder="Search…" [(ngModel)]="term" />
+    <label class="check">
+      <input type="checkbox" [(ngModel)]="onlyWithMaps" /> Only layers used by at least one map
+    </label>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Layer</th>
+        <th>Maps using it</th>
+        <th>Team</th>
+        <th>Service URL</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let l of filtered">
+        <td>
+          <div class="layer-name">{{ l.name }}</div>
+          <div class="subtle">{{ l.id }}</div>
+        </td>
+        <td>
+          <div class="badges">
+            <span class="badge" *ngFor="let m of l.mapsUsedIn">{{ m }}</span>
+            <span *ngIf="l.mapsUsedIn.length===0" class="subtle">—</span>
+          </div>
+        </td>
+        <td>{{ l.ownerTeam }}</td>
+        <td><code>{{ l.serviceUrl }}</code></td>
+        <td><button type="button" (click)="copy(l.serviceUrl)">Copy URL</button></td>
+      </tr>
+    </tbody>
+  </table>
+</section>

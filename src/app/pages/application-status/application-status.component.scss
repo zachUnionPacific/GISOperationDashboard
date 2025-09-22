@@ -1,0 +1,11 @@
+.card { border:1px solid #eee; padding:16px; border-radius:12px; background:#fff; }
+.toolbar { display:flex; gap:8px; margin-bottom:12px; }
+.toolbar input[type="search"] { flex:1; padding:8px 10px; border:1px solid #ddd; border-radius:8px; }
+.toolbar select { padding:8px 10px; border:1px solid #ddd; border-radius:8px; }
+table { width:100%; border-collapse:collapse; }
+th, td { padding:8px; border-bottom:1px solid #f0f0f0; text-align:left; }
+th { cursor:pointer; user-select:none; }
+.pill { padding:2px 8px; border-radius:999px; font-size:12px; font-weight:600; border:1px solid transparent; }
+.up { background:#e6ffed; color:#05621a; border-color:#b7f5c4; }
+.degraded { background:#fff8e1; color:#7a5700; border-color:#ffe08a; }
+.down { background:#ffe6e6; color:#7a0018; border-color:#ffb3c1; }

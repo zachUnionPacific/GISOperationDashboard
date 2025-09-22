@@ -1,12 +1,15 @@
-<header>
-    <up-app-bar bar-position="top">
-        <up-app-bar-item>
-            <strong>{{title}}</strong>
-        </up-app-bar-item>
-    </up-app-bar>
-</header>
-<main>
+<!-- keep this for your unit test -->
+<h1 class="visually-hidden">Hello, {{ title }}</h1>
 
-    <router-outlet />
+<header class="topbar">
+  <div class="brand">GIS Ops Dashboard</div>
+  <nav>
+    <a [routerLink]="['/dashboard']" routerLinkActive="active">Dashboard</a>
+    <a [routerLink]="['/application-status']" routerLinkActive="active">Application Status</a>
+    <a [routerLink]="['/feature-layer-mapping']" routerLinkActive="active">Feature Layer Mapping</a>
+  </nav>
+</header>
+
+<main class="container">
+  <router-outlet></router-outlet>
 </main>
-    

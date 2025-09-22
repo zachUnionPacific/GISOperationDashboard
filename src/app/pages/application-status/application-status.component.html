@@ -1,1 +1,35 @@
-<p>application-status works!</p>
+<section class="card">
+  <h2>Application Status</h2>
+  <div class="toolbar">
+    <input type="search" placeholder="Search by app, team, on-call, status…" [(ngModel)]="term" />
+    <select [(ngModel)]="statusFilter" aria-label="Filter by health">
+      <option value="ALL">All</option>
+      <option value="UP">UP</option>
+      <option value="DEGRADED">DEGRADED</option>
+      <option value="DOWN">DOWN</option>
+    </select>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th (click)="setSort('name')">App</th>
+        <th (click)="setSort('status')">Status</th>
+        <th (click)="setSort('onCall')">On-call</th>
+        <th (click)="setSort('ownerTeam')">Team</th>
+        <th (click)="setSort('lastCheck')">Last check</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let a of filtered">
+        <td>{{ a.name }}</td>
+        <td><span class="pill" [class.up]="a.status==='UP'" [class.degraded]="a.status==='DEGRADED'" [class.down]="a.status==='DOWN'">{{ a.status }}</span></td>
+        <td>{{ a.onCall || '—' }}</td>
+        <td>{{ a.ownerTeam }}</td>
+        <td>{{ a.lastCheck | date:'short' }}</td>
+        <td>{{ a.notes || '—' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

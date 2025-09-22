@@ -1,0 +1,12 @@
+.card { border:1px solid #eee; padding:16px; border-radius:12px; background:#fff; }
+.links { margin-top:8px; display:flex; gap:8px; }
+.btn { padding:8px 12px; border:1px solid #ddd; border-radius:8px; text-decoration:none; color:#333; }
+.btn:hover { background:#f6f6f6; }
+.app-list { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:12px; }
+.app-list li { border:1px solid #f0f0f0; border-radius:10px; padding:12px; }
+.row { display:flex; align-items:center; justify-content:space-between; }
+.name { font-weight:700; }
+.mini { font-size:12px; text-decoration:none; color:#3b5bd6; }
+.mini:hover { text-decoration:underline; }
+.desc { color:#444; margin-top:4px; }
+.meta { color:#666; font-size:12px; margin-top:6px; }
